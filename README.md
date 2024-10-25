@@ -2,16 +2,26 @@
 
 Tool: discover WIFI with easy password
 
-## Bash script `test_wifi.sh`
+## 01. With Shell bash script `test_wifi.sh`
 
 set the right permission in this case execution:
 
     chmod +x test_wifi.sh
     ./test_wifi
 
-## Python script (`index.py`)
 
-is not working, but it's useful to understand the use and
+Requirements:
+
+- Enable wifi module in your PC `Linux`
+- Shell `bash`
+
+Preview:
+
+![image gif](./docs/readme/hack-wifi-shell.gif)
+
+## 02. With Python script (`index.py`) -- is not working --
+
+But it's useful to understand the use and
 communication of WIFI inside
 
 ### create project
