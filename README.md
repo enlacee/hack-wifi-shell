@@ -41,7 +41,7 @@ You have to execute this script for not change the permission of the files `we n
 
     sudo ./venv/bin/python index.py 
 
-
+![image gif](./docs/readme/hack-wifi-python.gif)
 
 ### Error: bug:
 
