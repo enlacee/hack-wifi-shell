@@ -1,16 +1,16 @@
-# test/hack WIFI
+# Hack WiFi - Discover WiFi with Easy Passwords
 
-Tool: discover WIFI with easy password
+This project provides two methods to discover WiFi networks with easily guessable passwords using a Bash script and a Python script.
 
 ## 01. With Shell bash script `test_wifi.sh`
 
-set the right permission in this case execution:
+To set the correct execution permissions, run:
 
     chmod +x test_wifi.sh
     ./test_wifi
 
 
-Requirements:
+## Requirements:
 
 - Enable wifi module in your PC `Linux`
 - Shell `bash`
@@ -19,36 +19,36 @@ Preview:
 
 ![image gif](./docs/readme/hack-wifi-shell.gif)
 
-## 02. With Python script (`index.py`) -- is not working --
+## 02. With Python script (`index.py`)
 
-But it's useful to understand the use and
-communication of WIFI inside
+**Note**: This script is currently not functional, but it is useful for understanding WiFi communication.
 
-### create project
+### Project Setup
 
     python -m venv venv
     source ./venv/bin/active
     pip install -r requirements.txt
 
-### Execute the command start app
-Execute the next command 
-You need to execute usend venviroment python with `sudo` because
-We need to access to networksFiles just have access by root it's for security
+### Execute the Application
 
-    Permission denied: '/var/run/wpa_supplicant'
+**note**: error to access without `sudo`
 
-You have to execute this script for not change the permission of the files `we need to run with sudo`
+`Permission denied: '/var/run/wpa_supplicant'`
+
+Run the following command with sudo to access necessary network files:
 
     sudo ./venv/bin/python index.py 
 
 ![image gif](./docs/readme/hack-wifi-python.gif)
 
-### Error: bug:
+### Error: Known Bug
 
-A some wifi module not retun the true connection and for them
-i cant know when the password is correct! in this script
-the code that not working like i want it it: `index.py`
+Some WiFi modules do not return the correct connection status, which prevents me from determining when the password is correct. The problematic code is:  into the file `index.py`
 
     if iface.status() == const.IFACE_CONNECTED:
 
+## Conclusion
 
+This project emphasizes the importance of using strong passwords for your WiFi networks. Weak passwords are easily guessable, making your network vulnerable.
+
+Feel free to explore the code and contribute to the project! :) 
