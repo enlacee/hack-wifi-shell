@@ -7,13 +7,32 @@ This project provides two methods to discover WiFi networks with easily guessabl
 To set the correct execution permissions, run:
 
     chmod +x test_wifi.sh
-    ./test_wifi
+    ./test_wifi.sh
 
 
 ## Requirements:
 
 - Enable wifi module in your PC `Linux`
 - Shell `bash`
+
+## how to see ram consumption
+
+You must be install `/usr/bin/time` paquete GNU `time`
+
+    sudo pacman -S time
+
+Once installed, you can use `/usr/bin/time` directly
+
+    /usr/bin/time -v ./test_wifi.sh
+
+Result:
+
+![memory-ram-usage.png](./docs/readme/memory-ram-usage.png)
+
+
+If you need monitor the whole process
+you can use `top` or `htop` tool and find the process named `test_wifi.sh`
+
 
 Preview:
 

@@ -22,7 +22,7 @@ while IFS= read -r password; do
 
     # Verificar si la conexión fue exitosa
     if nmcli -t -f active,ssid dev wifi | grep -q "^yes:$ssid$"; then
-        echo "¡Connection succefull"
+        echo "¡Connection successful"
         break
     else
         echo "Wrong password."
